@@ -102,6 +102,36 @@ int main() {
     printf("Area: %.2f km2\n", area2);
     printf("PIB: %.2f\n", pib2);
     printf("Pontos Turisticos: %d\n", pontos2);
+    
+    // Batalha das cartas
+// Calcular Super Poder de cada carta
+float super1 = (float)populacao1 + area1 + pib1 + pontos1 + pibpcapta1 + (1.0 / denspopu1);
+float super2 = (float)populacao2 + area2 + pib2 + pontos2 + pibpcapta2 + (1.0 / denspopu2);
+
+// Comparações usando apenas operadores relacionais
+printf("\nComparacao de Cartas:\n");
+
+printf("Populacao: Carta 1 venceu (%d)\n", populacao1 > populacao2);
+printf("Populacao: Carta 2 venceu (%d)\n", populacao2 > populacao1);
+
+printf("Area: Carta 1 venceu (%d)\n", area1 > area2);
+printf("Area: Carta 2 venceu (%d)\n", area2 > area1);
+
+printf("PIB: Carta 1 venceu (%d)\n", pib1 > pib2);
+printf("PIB: Carta 2 venceu (%d)\n", pib2 > pib1);
+
+printf("Pontos Turisticos: Carta 1 venceu (%d)\n", pontos1 > pontos2);
+printf("Pontos Turisticos: Carta 2 venceu (%d)\n", pontos2 > pontos1);
+
+// Densidade populacional - menor vence
+printf("Densidade Populacional: Carta 1 venceu (%d)\n", denspopu1 < denspopu2);
+printf("Densidade Populacional: Carta 2 venceu (%d)\n", denspopu2 < denspopu1);
+
+printf("PIB per Capita: Carta 1 venceu (%d)\n", pibpcapta1 > pibpcapta2);
+printf("PIB per Capita: Carta 2 venceu (%d)\n", pibpcapta2 > pibpcapta1);
+
+printf("Super Poder: Carta 1 venceu (%d)\n", super1 > super2);
+printf("Super Poder: Carta 2 venceu (%d)\n", super2 > super1);
 
     return 0;
 }
